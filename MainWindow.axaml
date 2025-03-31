@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AnkietaPreferencji2.Views.MainWindow"
+        Width="400" Height="400" Title="Ankieta Preferencji">
+    
+    <StackPanel Margin="20">
+        <TextBlock Text="Podaj swoje imię:"/>
+        <TextBox x:Name="ImieTextBox"/>
+        
+        <TextBlock Text="Wybierz kategorię zainteresowań:"/>
+        <ComboBox x:Name="KategoriaComboBox">
+            <ComboBoxItem>Technologia</ComboBoxItem>
+            <ComboBoxItem>Sport</ComboBoxItem>
+            <ComboBoxItem>Kultura</ComboBoxItem>
+        </ComboBox>
+        
+        <Button x:Name="ZatwierdzButton" Content="Zatwierdź" />
+        
+        <TextBlock Text="Odpowiedz na pytania:"/>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Czy lubisz programować?" Width="200"/>
+                <CheckBox x:Name="Pytanie1CheckBox"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Czy uprawiasz sport?" Width="200"/>
+                <CheckBox x:Name="Pytanie2CheckBox"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Czy lubisz muzykę?" Width="200"/>
+                <CheckBox x:Name="Pytanie3CheckBox"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <Button x:Name="PodsumowanieButton" Content="Pokaż podsumowanie"/>
+
+        <StackPanel x:Name="PodsumowaniePanel" IsVisible="False">
+            <TextBlock x:Name="PodsumowanieTextBlock"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
